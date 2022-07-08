@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Form</title>
+    <style>
+        .warna_merah {
+            color: red;
+        }
+        
+        #nama {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Latihan Form</h1>
+    
+    <!-- <form action="proses.php" method="POST"> -->
+    <form>
+        <label class="warna_merah" for="nama">Nama: </label>
+        <input id="nama" type="text" placeholder="Masukkan Nama Lengkap" /> <br/><br/>
+    
+        <label for="tgl_lahir">Tanggal Lahir: </label>
+        <input id="tgl_lahir" type="date" /> <br/><br/>
+    
+        <label for="jk">Jenis Kelamin: </label>
+        <input type="radio" value="Laki-laki" name="jk" />Laki-laki
+        <input type="radio" value="Perempuan" name="jk" />Perempuan <br/><br/>
+    
+        <label class="warna_merah" for="hobi">Hobi: </label>
+        <input type="checkbox" value="Berenang">Berenang&nbsp;
+        <input type="checkbox" value="Berlari">Berlari&nbsp;
+        <input type="checkbox" value="Coding">Coding&nbsp; <br/><br/>
+    
+        <label class="warna_merah" for="mapel">Mata Pelajaran Favorit: </label>
+        <select id="mapel">
+            <option value="" disabled selected>- Pilih Mapel -</option>
+            <option value="Matematika">Matematika</option>
+            <option value="Pemrograman Javascript">Pemrograman Javascript</option>
+            <option value="Pemrograman PHP">Pemrograman PHP</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS" disabled>CSS</option>
+        </select> <br/><br/>
+    
+        <fieldset>
+            <legend class="warna_merah">Alamat</legend>
+            <label for="provinsi">Provinsi: </label>
+            <select id="provinsi">
+                <option value="Sumatera Utara">Sumatera Utara</option>
+                <option value="Sumatera Selatan">Sumatera Selatan</option>
+                <option value="...">...</option>
+            </select> <br/><br/>
+            
+            <label for="kota">Kabupaten / Kota: </label>
+            <select id="kota">
+                <option value="Palembang">Palembang</option>
+                <option value="Wonogiri">Wonogiri</option>
+                <option value="...">...</option>
+            </select> <br/><br/>
+    
+            <label for="kelurahan">Kelurahan / Desa: </label>
+            <select id="kelurahan">
+                <option value="Kelurahan X">Kelurahan X</option>
+                <option value="Kelurahan Y">Kelurahan Y</option>
+                <option value="...">...</option>
+            </select> <br/><br/>
+    
+            <!-- <label for="alamat" style="vertical-align: top;">Alamat: </label> -->
+            <textarea id="alamat" cols="50" rows="5" placeholder="Masukkan Detail Alamat (Misalnya: Jalan .....)"></textarea> 
+    
+        </fieldset><br/>
+    
+        <label for="password">Password: </label>
+        <input type="password" id="password" /> <br/><br/>
+    
+        <label for="foto_profil">Foto Profil: </label>
+        <input type="file" id="foto_profil" accept="image/png, image/gif, image/jpeg" /> <br/><br/>
+
+        <label for="jam_masuk">Jam Masuk: </label>
+        <input id="jam_masuk" type="time" /> <br/><br/>
+
+        <label for="harga">Harga: </label>
+        <input type="number" id="harga" /> <br/><br/>
+
+        <label for="warna">Warna: </label>
+        <input type="color" id="warna" /> <br/><br/>
+
+        <label for="email">E-Mail: </label>
+        <input type="email" id="email" /> <br/><br/>
+    
+        <input type="submit" value="Simpan Data" onclick="welcome()" /> &nbsp; 
+        <input type="reset" value="Reset" />
+
+    </form>
+
+    <script>
+        function welcome(){
+            alert('Welcome.... '+document.getElementById('nama').value);
+        }
+    </script>
+
+</body>
+</html>

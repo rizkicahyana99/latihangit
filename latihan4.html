@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        html {
+            background: rgb(228, 228, 228);
+        }
+        body {
+            margin: 0;
+        }
+        /* bisa ditulis #header atau div#header, sama saja */
+        div#header {
+            background-color: aqua;
+            height: 5em;
+            text-align: center;
+            /* margin-bottom: 50px; */
+            bottom: 50px;
+            font-family: 'arial';
+        }
+        #content {
+            float: left;
+            width: 68%;
+            background-color: greenyellow;
+            height: 40em;
+            /* height: auto; */
+            /* padding: 30px; untuk padding semua */
+            /* padding: 15px 100px 15px 40px; urutan dari atas kanan bawah kiri */
+            padding: 0 50px; /* urutan dari (atas dan bawah) (kanan dan kiri) */
+            font-family: 'Courier';
+            border: 10px solid red;
+        }
+        #sidebar {
+            float: left;
+            width: 20%;
+            background-color: blanchedalmond;
+            /* height: 35em; */
+            height: auto;
+        }
+        #footer {
+            float: left;
+            width: 100%;
+            background-color: blue;
+            color: #fff;
+            height: 5em;
+            position: fixed;
+            bottom: 0;
+        }
+
+        /* jika menggunakan id, selector nya adalah pagar (#) */
+        #header h2, #header h4 {
+            margin-bottom: -1em;
+        }
+        /* jika menggunakan class, selector nya adalah titik (.) */
+        .paragraf-background-merah {
+            background-color: red;
+            color: white;
+        }
+        #iframe, #content {
+            height: 40em;
+        }
+        #iframe {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h2>Header nih Bos...</h2>
+        <h4>Semua yang di sini akan rata tengah</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    </div>
+    <div id="content">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit perferendis dignissimos, ipsam quisquam doloremque quo earum officiis aspernatur laudantium modi consectetur, voluptatum nihil, a qui obcaecati. Reprehenderit repellat laudantium consequuntur. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ex officia praesentium deleniti odit repellat consequuntur sequi, veritatis voluptate eveniet minima architecto libero voluptatem eius aspernatur quia excepturi mollitia minus.</p>
+        <div class="dalam">
+            <div id="dalam-2">
+                <iframe id="iframe" src="latihan3.html" frameborder="0"></iframe>
+            </div>
+        </div>
+        <p class="paragraf-background-merah">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt similique autem fugit cupiditate ratione ipsam temporibus vel. Consectetur id excepturi, amet fugit quibusdam magnam deleniti doloribus ipsam fuga provident. Necessitatibus.</p>
+    </div>
+    <div id="sidebar">
+        Ini Sidebar
+    </div>
+    <div id="footer">
+        Ini Footer
+    </div>
+</body>
+</html>

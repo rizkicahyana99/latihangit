@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar HTML</title>
+    <style>
+        #kotak li {
+            margin-left: -1.7em;
+        }
+    </style>
+</head>
+<body>
+    <h2>Belajar HTML</h2>
+
+    <h3>Ordered List</h3>
+    <p>Nama Buah-buahan:</p>
+
+    <!-- ordered list default dimulai dari angka 1 -->
+    <ol>
+        <li>Apel</li>
+        <li>Mangga</li>
+        <li>Jeruk</li>
+        <li>Nanas</li>
+    </ol>
+    
+    <hr/>
+    <!-- ordered list default dimulai dari angka bebas -->
+    <ol start="58">
+        <li>Apel</li>
+        <li>Mangga</li>
+        <li>Jeruk</li>
+        <li>Nanas</li>
+    </ol>
+
+    <hr/>
+    <!-- ordered list 
+        type -> 1 || a || A || I || i
+    -->
+    <ol type="I">
+        <li>Apel</li>
+        <li>Mangga</li>
+        <li>Jeruk</li>
+        <li>Nanas</li>
+    </ol>
+
+    <hr/>
+
+    <h3>Unordered List</h3>
+    <p>Nama-nama Mata Pelajaran:</p>
+    <ul>
+        <li>Matematika</li>
+        <li>Bahasa Indonesia</li>
+        <li>Sejarah</li>
+        <li>Biologi</li>
+    </ul>
+
+    <hr/>
+    <!-- unordered list 
+        list-style-type -> disc || square || circle || none
+    -->
+    <ul id="kotak" style="list-style-type: square;">
+        <li><i>Matematika</i></li>
+        <li><em>Bahasa Indonesia</em></li>
+        <li><b>Sejarah</b></li>
+        <li><strong>Biologi</strong></li>
+    </ul>
+    
+
+    <hr/>
+    <ul style="list-style-type: circle;">
+        <li>Matematika</li>
+        <li>Bahasa Indonesia</li>
+        <li>Sejarah</li>
+        <li>Biologi</li>
+    </ul>
+
+    <!-- nested -->
+    <ul>
+        <li>Ilmu Pengetahuan Alam:</li>
+        <ul>
+            <li>Kimia</li>
+            <li>Fisika</li>
+            <li>Biologi</li>
+        </ul>
+        <li>Ilmu Pengetahuan Sosial:</li>
+        <ul>
+            <li>Ekonomi</li>
+            <li>Geografi</li>
+            <li>Sejarah</li>
+        </ul>
+    </ul>
+
+</body>
+</html>
