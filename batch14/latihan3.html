@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Tabel</title>
+    <style>
+        table tr td {
+            /* untuk nilai berbeda */
+            /* padding-top: 2em;
+            padding-right: 4em;
+            padding-bottom: 1em;
+            padding-left: 6em; */
+            /* padding: 2em 4em 1em 6em; (atas kanan bawah kiri)  */
+            /* padding: 1em; untuk semua arah dengan nilai sama (top - right - bottom - left) */            
+            padding: 0 1em; /*untuk atas & bawah (0); kanan & kiri (1em)*/
+        }
+
+        table th {
+            background-color: greenyellow;
+        }        
+    </style>
+</head>
+<body>
+    <h3>Tabel Mahasiswa</h3>
+    <table border="1" cellpadding: "1" cellspacing="0">
+        <tr>
+            <th rowspan="2">No.</th>
+            <th colspan="2">Nama</th>
+            <th rowspan="2">Nomor Induk</th>
+            <th rowspan="2">Alamat</th>
+        </tr>
+        <tr>
+            <th>Depan</th>
+            <th>Belakang</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Ahmad</td>
+            <td>Bustomi</td>
+            <td>1098394</td>
+            <td>Sragen</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Evan</td>
+            <td>Dimas</td>
+            <td>13893833</td>
+            <td>Surabaya</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Egy</td>
+            <td>Maulana Vikri</td>
+            <td>1829321</td>
+            <td>Bandung</td>
+        </tr>
+    </table>
+</body>
+</html>

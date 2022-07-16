@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan HTML</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/google-512.png">
+    <style>
+        /*  internal css */
+        /* 
+            id => pake tanda # (unik, ngga boleh dipake berulang)
+            class => pake tanda . (bisa dipake berkali-kali)   
+        */
+        /* #style-bab li, .style-ku {
+            margin-left: -1.5em;
+            color: blue;
+        }
+        #style-bab ol li {
+            margin-left: -3em;
+            color: green;
+        }
+        #style-bab ol ol li {
+            margin-left: -4.5em;
+            color: red;
+        } */
+    </style>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h3>Ordered List</h3>
+    <b>Nama Buah-Buahan (dengan angka dari 1): </b>
+    <ol class="style-ku">
+        <li>Mangga</li>
+        <li>Apel</li>
+        <li>Jeruk</li>
+        <li>Semangka</li>
+    </ol>
+    <hr/>
+
+    <b>Nama Buah-Buahan (dengan angka dari bebas, misal: 20): </b>
+    <ol start="20" class="style-ku">
+        <li>Mangga</li>
+        <li>Apel</li>
+        <li>Jeruk</li>
+        <li>Semangka</li>
+    </ol>
+    <hr/>
+
+    <b>Nama Buah-Buahan (dengan huruf kecil): </b>
+    <!-- 
+        type => 'a' atau 'A' atau 'i' atau 'I'
+     -->
+    <ol class="style-ku" type="I">
+        <li>Mangga</li>
+        <li>Apel</li>
+        <li>Jeruk</li>
+        <li>Semangka</li>
+    </ol>
+    <hr/>
+    <br/>
+
+    <h3>Unordered List</h3>
+    <b>Nama Mata Pelajaran: </b>
+    <ul>
+        <li>Matematika</li>
+        <li>Bahasa Indonesia</li>
+        <li>Fisika</li>
+        <li>Ekonomi</li>
+    </ul>
+    <hr/>
+
+    <b>Nama Mata Pelajaran: </b>
+    <!-- list-style-type => 'disc' atau 'circle' atau 'square' -->
+    <ul style="list-style-type: circle">
+        <li>Matematika</li>
+        <li>Bahasa Indonesia</li>
+        <li>Fisika</li>
+        <li>Ekonomi</li>
+    </ul>
+    <hr/>
+
+    <h3>Ordered List di dalam Ordered List (Nested)</h3>
+    <ol type="I" id="style-bab"> 
+        <li>BAB I</li> <!-- #style-bab li -->
+        <ol type="1">
+            <li>Landasan Teori</li> <!-- #style-bab ol li  -->
+            <ol type="a">
+                <li>Teori 1</li> <!-- #style-bab ol ol li  -->
+                <li>Teori 2</li>
+            </ol>
+            <li>Rumusan Masalah</li>
+            <ol type="a">
+                <li>Masalah 1</li>
+                <li>Masalah 2</li>
+            </ol>
+        </ol>
+        <li>BAB II</li>
+        <ol start="3">
+            <li style="margin-left: -1.5em;">Latar Belakang</li>
+            <ol type="a">
+                <li style="margin-left: -3em;">Latar Belakang 1</li>
+                <li style="margin-left: -3em;">Latar Belakang 2</li>
+            </ol>
+            <li style="margin-left: -1.5em;">Tujuan</li>
+            <ul>
+                <!-- styling inline css -->
+                <li style="margin-left: -3em;">Tujuan 1</li>
+                <li style="margin-left: -3em;">Tujuan 2</li>
+                <li style="margin-left: -3em;">Tujuan 4</li>
+                <li style="margin-left: -3em;">Tujuan 5</li>
+            </ul>
+        </ol>
+        <li>BAB III</li>
+    </ol>
+
+</body>
+</html>

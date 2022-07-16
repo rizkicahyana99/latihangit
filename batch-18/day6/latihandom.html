@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Ubah Warna</title>
+</head>
+<body>
+    <h2>Program Ubah Warna</h2>
+
+    <label for="warna_bg">Warna Latar: </label>
+    <input type="color" id="warna_bg" onchange="gantiWarnaBackground()" /> <br/><br/>
+
+    <label for="warna_text">Warna Text: </label>
+    <input type="color" id="warna_text" onchange="gantiWarnaText()" /> <br/><br/>
+
+    <script>
+        function gantiWarnaBackground(){
+            let bg_color = document.getElementById('warna_bg').value;
+            document.body.style.backgroundColor = bg_color;
+        }
+
+        function gantiWarnaText(){
+            let bg_text = document.getElementById('warna_text').value;
+            document.body.style.color = bg_text;
+        }
+</script>
+
+</body>
+</html>

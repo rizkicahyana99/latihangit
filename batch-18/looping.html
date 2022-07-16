@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Looping</title>
+
+    <label for="batas_awal">Batas Awal: </label>
+    <input type="number" id="batas_awal" /> <br/><br/>
+
+    <label for="batas_akhir">Batas Akhir: </label>
+    <input type="number" id="batas_akhir" /> <br/><br/>
+
+    <label for="batas_akhir">Bilangan Kelipatan Berapa: </label>
+    <input type="number" id="kelipatan" /> <br/><br/>
+
+    <button onclick="looping_for()">Looping For..</button>
+    <button onclick="looping_while_do()">Looping While Do..</button>
+    <button onclick="looping_do_while()">Looping Do While..</button>
+    <button onclick="genap()">Bilangan Genap</button>
+    <button onclick="ganjil()">Bilangan Ganjil</button>
+    <button onclick="kelipatan()">Bilangan Kelipatan</button>
+
+</head>
+<body>
+    <p id="hasil"></p>
+
+    <script>
+        let kalimat = 'Hello, World';
+        let tampung = '';
+
+        for (let i = 0; i < 10; i++) {
+            console.log(kalimat);
+            tampung = tampung + parseInt(i+1) + '. ' + kalimat + '<br/>';
+        }
+        // document.getElementById('hasil').innerHTML = tampung;
+        
+        function looping_for(){
+            let batas_awal = parseInt(document.getElementById('batas_awal').value);
+            let batas_akhir = parseInt(document.getElementById('batas_akhir').value);
+            let temp = '';
+            
+            for(let i = batas_awal; i <= batas_akhir; i++){
+                console.log(kalimat);
+                temp = temp + parseInt(i) + '. ' + kalimat + '<br/>';
+            }
+            document.getElementById('hasil').innerHTML = temp;
+        }
+
+        function looping_while_do(){
+            let batas_awal = parseInt(document.getElementById('batas_awal').value);
+            let batas_akhir = parseInt(document.getElementById('batas_akhir').value);
+            let temp = '';
+            
+            let i = batas_awal;
+            while(i <= batas_akhir){
+                console.log(kalimat);
+                temp = temp + parseInt(i) + '. ' + kalimat + '<br/>';
+                i++;
+            }
+
+            document.getElementById('hasil').innerHTML = temp;
+        }
+
+        function looping_do_while(){
+            let batas_awal = parseInt(document.getElementById('batas_awal').value);
+            let batas_akhir = parseInt(document.getElementById('batas_akhir').value);
+            let temp = '';
+            
+            let i = batas_awal;
+            do{
+                console.log(kalimat);
+                temp = temp + parseInt(i) + '. ' + kalimat + '<br/>';
+                i++;
+            }while(i <= batas_akhir);
+
+            document.getElementById('hasil').innerHTML = temp;
+        }
+
+        function genap(){
+            let batas_awal = parseInt(document.getElementById('batas_awal').value);
+            let batas_akhir = parseInt(document.getElementById('batas_akhir').value);
+            let temp = '';
+            
+            for(let i = batas_awal; i <= batas_akhir; i++){
+                if(i % 2 == 0){ // jika i adalah bilangan kelipatan 2 atau habis dibagi 2
+                    console.log(i);
+                    temp = temp + i + '. ' + kalimat + '<br/>';
+                }
+            }
+            document.getElementById('hasil').innerHTML = temp;
+        }
+
+        function ganjil(){
+            let batas_awal = parseInt(document.getElementById('batas_awal').value);
+            let batas_akhir = parseInt(document.getElementById('batas_akhir').value);
+            let temp = '';
+            
+            for(let i = batas_awal; i <= batas_akhir; i++){
+                // !== tidak sama dengan
+                if(i % 2 !== 0){ // jika i adalah bukan bilangan kelipatan 2 atau tidak habis dibagi 2
+                    console.log(i);
+                    temp = temp + i + '. ' + kalimat + '<br/>';
+                }
+            }
+            document.getElementById('hasil').innerHTML = temp;
+        }
+
+        function kelipatan(){
+            let batas_awal = parseInt(document.getElementById('batas_awal').value);
+            let batas_akhir = parseInt(document.getElementById('batas_akhir').value);
+            let kelipatan = parseInt(document.getElementById('kelipatan').value);
+            let temp = '';
+            
+            for(let i = batas_awal; i <= batas_akhir; i++){
+                // !== tidak sama dengan
+                if(i % kelipatan == 0){ // jika i adalah bukan bilangan kelipatan 'kelipatan' atau tidak habis dibagi 'kelipatan'
+                    console.log(i);
+                    temp = temp + i + '. ' + kalimat + '<br/>';
+                }
+            }
+            document.getElementById('hasil').innerHTML = temp;
+        }
+
+
+        let a = 5;
+        const phi = 3.14; // const digunakan untuk nilai yang tidak berubah
+
+
+    </script>
+</body>
+</html>

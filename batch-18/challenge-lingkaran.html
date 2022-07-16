@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Menghitung Luas dan Keliling Lingkaran</title>
+</head>
+<body>
+    <h2>Program Menghitung Luas dan Keliling Lingkaran</h2>
+
+    <label for="jari_jari">Jari-jari: </label>
+    <input type="number" id="jari_jari" required /> <br/><br/>
+
+    <label for="jenis_hitung">Jenis Hitung: </label>
+    <!-- <input type="radio" id="keliling" name="jenis_hitung" value="keliling" />Keliling 
+    <input type="radio" name="jenis_hitung" value="luas" />Luas  -->
+
+    <select id="jenis_hitung" required>
+        <option value="" disabled selected>-Pilih Jenis Hitung-</option>
+        <option value="keliling">Keliling</option>
+        <option value="luas">Luas</option>
+    </select>
+
+    <hr/>
+    <h3>Hasil: <span id="hasil"></span></h3>
+
+    <button onclick="hitungLuas()">Hitung Luas</button> 
+    <button onclick="hitungKeliling()">Hitung Keliling</button> 
+    <button onclick="hitung()">Hitung </button>
+
+    <script src="lingkaran.js"></script>
+</body>
+</html>

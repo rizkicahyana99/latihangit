@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1</title>
+    <style>
+        #tombol_simpan, .tombol_simpan {
+            background-color: greenyellow;
+            padding: .5em 1em;
+            color: #000;
+        }
+        #tombol_simpan:active, #tombol_simpan:focus {
+            background-color: green;
+        }
+
+        #tombol_simpan:hover, .tombol_simpan:hover {
+            cursor: pointer;
+            background-color: rgb(105, 232, 105);
+        }
+
+        .tombol_batal {
+            background-color: red;
+            padding: .5em 1em;
+            color: #fff;
+        }
+        .tombol_batal:hover {
+            background-color: rgb(213, 25, 25);
+            cursor: pointer;
+        }
+        .tombol_batal:active, .tombol_batal:focus {
+            background-color: rgb(147, 10, 10);
+        }
+
+
+    </style>
+</head>
+<body>
+    <h3>Tombol dengan ID (#)</h3>
+    <button id="tombol_simpan" onclick="gantiWarna()">Simpan</button> <br/><br/>
+
+    <h3>Tombol dengan Class (.)</h3>
+    <button id="tombol_simpan2" class="tombol_simpan" onclick="ganti()">Simpan</button>
+
+    <script>
+        
+        function gantiWarna(){
+            console.log('tombol diklik');
+            // camelCase
+            document.getElementById('tombol_simpan').style.backgroundColor = 'red';
+            document.getElementById('tombol_simpan').style.color = 'white';
+            document.getElementById('tombol_simpan').innerHTML = 'Batal';
+        }
+        
+        function ganti(){
+            let tulisan_tombol = document.getElementById('tombol_simpan2').innerText;
+            // console.log(tulisan_tombol);
+            
+            if(tulisan_tombol == 'Simpan'){
+                document.getElementById('tombol_simpan2').innerHTML = 'Batal';
+                document.getElementById('tombol_simpan2').classList.remove('tombol_simpan');
+                document.getElementById('tombol_simpan2').classList.add('tombol_batal');
+            }else{
+                document.getElementById('tombol_simpan2').innerHTML = 'Simpan';
+                document.getElementById('tombol_simpan2').classList.remove('tombol_batal');
+                document.getElementById('tombol_simpan2').classList.add('tombol_simpan');
+            }
+
+            // button.classList.remove('tombol_simpan');
+            
+        }
+
+    </script>
+
+</body>
+</html>

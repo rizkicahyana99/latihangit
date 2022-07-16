@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 4</title>
+    <style>
+        .biru {
+            color: blue;
+        }
+        .merah {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <label for="pesan">Pesan: </label>
+    <input type="text" id="pesan" /> <br/>
+
+    <label for="jumlah">Berapa kali: </label>
+    <input type="number" id="jumlah" /> <br/>
+    <input type="button" value="Cetak!!" onclick="cetak()" /> <br/> <br/>
+
+    <h3 id="hasil"></h3>
+
+    <script>
+        function cetak(){
+            let pesan = document.getElementById('pesan').value;
+            let jumlah = document.getElementById('jumlah').value;
+            let hasil = '';
+
+            for(let i=1; i<=jumlah; i++){
+                if(i % 2 == 0){
+                    hasil += '<span class="biru">' + i + '. ' + pesan + '</span><br/>';
+                }else{
+                    hasil += '<span class="merah">' + i + '. ' + pesan + '</span><br/>';
+                }
+            }
+            
+            document.getElementById('hasil').innerHTML = hasil;
+        }
+    </script>
+
+</body>
+</html>

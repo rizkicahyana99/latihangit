@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Regex</title>
+    <style>
+        #pesan_error {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>Latihan Validasi Password</h2>
+
+    <form id="form-saya">
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" onkeyup="validasi()"/><br/><br/>
+        <input type="submit" value="Simpan" /> <br/>
+
+        <p id="pesan_error">Panjang password minimal 8 karakter, harus ada huruf kapital, angka, dan simbol</p>
+
+    </form>
+
+    <script>
+
+        const inputPassword = document.querySelector('#password');
+
+        function validasi(){
+            console.log('masuk');
+            value = document.getElementById('password').value;
+            if(!inputPassword.validity.valid){
+                console.log('Password salah!');
+                document.getElementById('pesan_error').style.display = 'block';
+            }else{
+                console.log('Password valid!');
+                document.getElementById('pesan_error').style.display = 'none';
+            }
+        }
+
+        // var kalimat = 'Belajar JavaScript';
+        // var pola = /JavaScript/;
+
+        // console.log('pola: ' + pola.test(kalimat));
+        // console.log('Belajar: '+ /Belajar/.test(kalimat));
+        // console.log('belajar: ' + /belajar/.test(kalimat));
+
+
+    </script>
+</body>
+</html>
+

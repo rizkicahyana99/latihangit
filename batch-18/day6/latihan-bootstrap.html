@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Bootstrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+</head>
+<body>
+    <br/>
+    <button class="btn btn-primary"><i class="fa fa-user"></i> Ini Tombol Bootstrap</button>
+    <button class="btn btn-primary btn-lg">Lanjutkan <i class="fa fa-arrow-alt-circle-right"></i></button>
+    <button class="btn btn-primary btn-sm">Ini Tombol Bootstrap Sm</button> <br/><br/>
+    
+    <button class="btn btn-default">Ini Tombol Bootstrap Default</button>
+    <button class="btn btn-warning">Ini Tombol Bootstrap Warning</button>
+    <button class="btn btn-danger">Ini Tombol Bootstrap Danger</button>
+
+    <div class="row">
+        <div class="col-12">
+            <label for="nama">Nama: </label>
+        <input class="form-control" type="text" id="nama" /> <br/><br/>
+    
+        <label for="tgl_lahir">Tanggal Lahir: </label>
+        <input class="form-control" type="date" id="tgl_lahir" /> <br/><br/>
+    
+        <label for="jk">Jenis Kelamin: </label>
+        <input class="form-control" type="radio" name="jk" value="Laki-laki" />Laki-laki
+        <input class="form-control" type="radio" name="jk" value="Perempuan" />Perempuan <br/><br/>
+    
+        <label for="programming_favorite">Materi Pemrograman Favorit: </label>
+        <input class="form-control" type="checkbox" name="programming_favorite" value="HTML" />HTML
+        <input class="form-control" type="checkbox" name="programming_favorite" value="CSS" />CSS   
+        <input class="form-control" type="checkbox" name="programming_favorite" value="Javascript" />Javascript <br/><br/>    
+    
+        <label for="provinsi">Provinsi: </label>
+        <select class="form-control" id="provinsi">
+            <option value="" disabled selected>- Pilih Provinsi -</option>
+            <option value="Sumatera Utara">Sumatera Utara</option>
+            <option value="Sulawesi Selatan">Sulawesi Selatan</option>
+            <option value="Jawa Barat">Jawa Barat</option>
+        </select> <br/><br/>
+        </div>
+    </div>
+    
+</body>
+</html>

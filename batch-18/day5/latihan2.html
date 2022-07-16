@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Hitung Mundur Maju</title>
+</head>
+<body>
+    <h2>Program Hitung Mundur-Maju: </h2>
+    <button onclick="mundur()">Mundur</button>
+    <button onclick="maju()">Maju</button> <br/><br/>
+
+    <h3 id="hasil"></h3>
+
+
+    <script>
+        let hasil = 10;
+        document.getElementById('hasil').innerHTML = hasil;
+
+
+        function mundur(){
+            // hasil = hasil - 1; 
+            // penulisan lainnya:
+            // hasil -= 1;
+            hasil--;
+            document.getElementById('hasil').innerHTML = hasil;
+        }
+        
+        function maju(){
+            // hasil = hasil + 1;
+            hasil += 1;
+            // hasil++;
+            document.getElementById('hasil').innerHTML = hasil;
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan</title>
+</head>
+<body>
+    <p id="hasil"></p>
+    <p id="hasil_object"></p>
+
+    <script>
+        document.write('<h2>Hello, World!</h2><p align="right">Isi Bebas</p><h1 style="color: red;">Heading 1</h1><hr/>');
+
+        // array --> variabel yang punya banyak nilai
+        let motor = ['Mio', 'Beat', 'Ninja', 'Kawasaki'];
+        /*
+            0 --> Mio
+            1 --> Beat
+            2 --> Ninja
+            3 --> Kawasaki
+        */
+        document.getElementById('hasil').innerHTML = motor[0];
+        
+        let hasil_motor = '';
+        for(let i = 0; i < motor.length; i++){
+            hasil_motor =  hasil_motor + parseInt(i+1) + '. ' + motor[i] + '<br/>';
+        }
+
+        document.getElementById('hasil').innerHTML = hasil_motor;
+        
+        // object --> instansiasi class
+        let motor_object = {
+            merk: 'Honda',
+            type: 'Beat',
+            warna: 'Hitam'
+        };
+        
+        let hasil_object = 'Saya punya motor merk: ' + motor_object.merk + ' type: ' + motor_object.type + ' warna: ' + motor_object.warna;
+        document.getElementById('hasil_object').innerHTML = hasil_object;
+        
+
+    </script>
+</body>
+</html>

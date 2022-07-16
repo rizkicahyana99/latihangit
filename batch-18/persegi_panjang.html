@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luas Persegi Panjang</title>
+</head>
+<body>
+    <h2>Program Menghitung Luas Persegi Panjang</h2>
+
+        <label for="panjang">Panjang: </label>
+        <input type="number" id="panjang" /> <br/><br/>
+
+        <label for="lebar">Lebar: </label>
+        <input type="number" id="lebar" /> <br/><br/>
+
+        <button onclick="hitungLuasPersegiPanjang()">Hitung Luas</button> <br/><br/>
+        <button onclick="hitungKelilingPersegiPanjang()">Hitung Keliling</button> <br/><br/>
+
+        <label>Hasil: </label> <span id="hasil"></span>
+
+    <hr/>    
+    <h2>Program Lampu Lalu Lintas</h2>
+    <label for="lampu">Warna Lampu: </label>
+    <select id="lampu">
+        <option value="" disabled selected>- Pilih Warna Lampu -</option>
+        <option value="Merah">Merah</option>
+        <option value="Kuning">Kuning</option>
+        <option value="Hijau">Hijau</option>
+        <option value="Suka - suka">Suka - suka</option>
+    </select> <br/><br/>
+    <label>Hasil: </label> <span id="hasil_lampu"></span> <br/><br/>
+
+    <button onclick="checkLampu()">Cek Arti Warna Lampu</button>
+
+    <script>
+        function checkLampu(){
+            let lampu = document.getElementById('lampu').value;
+            let hasil_lampu = '';
+            // console.log(lampu);
+            switch(lampu){
+                case 'Merah': 
+                    hasil_lampu = 'Berhenti';
+                    break;
+                case 'Kuning':
+                    hasil_lampu = 'Hati - hati';
+                    break;
+                case 'Hijau':
+                    hasil_lampu = 'Jalan';
+                    break;
+                default:
+                    hasil_lampu = 'Inputan salah!!!';
+                    break;
+            }
+
+            document.getElementById('hasil_lampu').innerHTML = hasil_lampu;
+        }
+
+        function hitungLuasPersegiPanjang(){
+            let panjang = document.getElementById('panjang').value;
+            let lebar = document.getElementById('lebar').value;
+            let luas = panjang * lebar;
+            console.log(luas);
+            document.getElementById('hasil').innerHTML = luas;
+        }
+
+        function hitungKelilingPersegiPanjang(){
+            let panjang = parseInt(document.getElementById('panjang').value);
+            let lebar = parseInt(document.getElementById('lebar').value);
+            let keliling = 2 * (panjang + lebar);
+            console.log(keliling);
+
+            document.getElementById('hasil').innerHTML = keliling;
+        }
+    </script>
+
+</body>
+</html>

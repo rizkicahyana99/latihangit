@@ -1,0 +1,16 @@
+/*
+external css
+*/
+
+#style-bab li, .style-ku {
+    margin-left: -1.5em;
+    color: blue;
+}
+#style-bab ol li {
+    margin-left: -3em;
+    color: green;
+}
+#style-bab ol ol li {
+    margin-left: -4.5em;
+    color: red;
+}

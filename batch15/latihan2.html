@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 2</title>
+    <style>
+        /* 
+            selector {
+                property: value
+            }
+            selector --> tag html tanpa tanda <>
+                     --> #nama_id (id (tanda #) --> unik, hanya digunakan 1 kali)
+                     --> .nama_class (class (tanda .) --> boleh digunakan berulang kali)
+        */
+        #buah-buahan li {
+        /* ol#buah-buahan li { */
+            margin-left: -1em;
+        }
+        .warna_biru {
+            color: blue;
+        }
+        .warna_merah {
+            color: red;
+        }
+        .tulisan_tebal {
+            font-weight: bold;
+        }
+        .tulisan_miring {
+            font-style: italic;
+        }
+        .ol-1 li {
+            margin-left: -1em;
+        }
+        .ol-2 li {
+            margin-left: -2.4em;
+        }
+        .ol-3 li {
+            margin-left: -3.9em;
+        }
+        .ul-1 li {
+            margin-left: -5.5em;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h3>Ordered List</h3> <!-- ol -->
+    <h4>Nama Buah-buahan</h4>
+    <ol>
+        <li style="margin-left: -1.5em;">Mangga</li>
+        <li style="margin-left: -1.5em;" class="warna_biru">Nanas</li>
+        <li style="margin-left: -1.5em;">Apel</li>
+        <li class="warna_biru tulisan_tebal tulisan_miring" style="margin-left: -1.5em;">Jeruk</li>
+    </ol>
+    <hr/>
+
+    <h4>Nama Buah-buahan (dimulai dari angka 34)</h4>
+    <ol id="buah-buahan" class="warna_biru" start="34">
+        <li>Mangga</li>
+        <li>Nanas</li>
+        <li>Apel</li>
+        <li>Jeruk</li>
+    </ol>
+    <hr/>
+    <!-- 
+        ol type bisa diisi dengan "1" atau "a" atau "A" atau "i" atau "I"
+    -->
+    <h4>Nama Buah-buahan (dimulai dari huruf a kecil)</h4>
+    <ol type="a" class="tulisan_miring warna_merah">
+        <li>Mangga</li>
+        <li>Nanas</li>
+        <li>Apel</li>
+        <li>Jeruk</li>
+    </ol>
+    <hr/>
+
+    <h4>Nama Buah-buahan (dimulai dari huruf a kecil)</h4>
+    <ol type="A">
+        <li>Mangga</li>
+        <li>Nanas</li>
+        <li>Apel</li>
+        <li>Jeruk</li>
+    </ol>
+    <hr/>
+
+    <h3>Unordered List</h3> <!-- ul -->
+    <ul>
+        <li>Wortel</li>
+        <li>Buncis</li>
+        <li>Kacang Panjang</li>
+        <li>Bayam</li>
+    </ul>
+    <hr/>
+
+    <!-- 
+        ul list-style-type bisa diisi dengan "disc" atau "circle" atau "square" atau "none" dll.
+     -->
+    <ul style="list-style-type: circle">
+        <li>Wortel</li>
+        <li>Buncis</li>
+        <li>Kacang Panjang</li>
+        <li>Bayam</li>
+    </ul>
+    <hr/>
+
+    <h3>Judul Penelitian</h3>
+
+    <ol class="ol-1" type="I">
+        <li>BAB I</li>
+        <ol class="ol-2" type="1">
+            <li>Latar Belakang</li>
+            <li>Rumusan Masalah</li>
+            <li>Tujuan Penelitian</li>
+        </ol>
+        <li>BAB II</li>
+        <ol class="ol-2" type="1">
+            <li>Landasan Teori</li>
+            <ol class="ol-3" type="a">
+                <li>Teori 1</li>
+                <ul class="ul-1">
+                    <li>Teori 1.1</li>
+                    <li>Teori 1.2</li>
+                </ul>
+                <li>Teori 2</li>
+                <ul class="ul-1">
+                    <li>Teori 2.1</li>
+                    <li>Teori 2.2</li>
+                </ul>
+                <li>Teori 3</li>
+            </ol>
+            <li>Bahasan Lanjutan</li>
+        </ol>
+        <li>BAB III</li>
+    </ol>
+
+</body>
+</html>
