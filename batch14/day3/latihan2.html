@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan2</title>
+    <style>
+        body {
+            color: red;
+            background-color: yellow;
+        }
+
+        .artikel {
+            /* override */
+            color: black;
+        }
+
+        #kotak1, #kotak2 {
+            width: 49.5%;
+            height: 10em;
+            border: solid 1px black;
+            /* float: left; */
+        }
+
+        #kotak1 p {
+            font-size: 15px;
+            font-weight: bold;
+            /* padding: 3em;   atas - kanan - bawah - kiri (3em) */
+            /* padding: 4em 8em; atas dan bawah (4em) - kanan dan kiri (8em) */
+            padding: 1em 3em 4em 8em; /* atas (1em) - kanan (3em) - bawah (4em) - kiri (8em) */
+        }
+
+        #kotak2 {
+            /* margin: 8em; */
+            /* margin: 3em 10em; */
+            margin-left: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+            height: 20em;
+            width: 80%;
+            background-color: green;
+            color: white;
+            font-style: 'bold';
+            font-family: 'Arial';
+        }
+
+        .tombol_utama {
+            padding: 1em 3em;
+            background-color: rgb(110, 110, 226);
+            color: white;
+        }
+        .tombol_utama:hover {
+            background-color: rgb(59, 59, 219);
+            cursor: pointer;
+        }
+        .tombol_utama:focus, .tombol_utama:active {
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Ini judul</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus sed doloremque repellendus dolores id ipsa facilis voluptates vero quibusdam sit unde corrupti eos quisquam veniam accusantium veritatis ea, voluptas temporibus.</p>
+
+    <div class="artikel">
+        <h3>Judul Artikel</h3>
+        <ol>
+            <li>Sub Judul 1</li>
+            <li>Sub Judul 2</li>
+            <li>Sub Judul 3</li>
+        </ol>
+    </div>
+
+    <div id="kotak1">
+        <p>Ini isi kotak 1</p>
+    </div>
+    
+
+    <div id="kotak2">
+        Ini isi kotak 2 <br/><br/>
+
+        <pre>
+            <p>
+            Ini isi 
+                dari 
+                kotak
+                nomor 2
+                        sdfsdfs vfdkjskjvs vk vsdkjv sd
+                    sdfsdfsd
+            sddsfds
+    ffgfdgdfg
+            </p>
+        </pre>
+
+    </div>
+
+    <h3>Ini tulisan</h3>
+
+    <button class="tombol_utama">Simpan</button>
+
+</body>
+</html>
